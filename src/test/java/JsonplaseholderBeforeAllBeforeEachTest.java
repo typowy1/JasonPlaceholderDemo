@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 public class JsonplaseholderBeforeAllBeforeEachTest {
+
     private final String BASE_URL = "https://jsonplaceholder.typicode.com/users";
     private static Faker faker;// jest użyta w metodzie ststycznej dlatego jest statyczna
     private String fakeName;
