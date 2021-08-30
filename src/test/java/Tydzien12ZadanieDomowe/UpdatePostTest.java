@@ -5,12 +5,12 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.json.JSONObject;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UpdatePostTest {
 
@@ -53,9 +53,9 @@ public class UpdatePostTest {
         JsonPath json = response.jsonPath();
         Integer responseUserId = json.get("userId");
 
-        Assertions.assertEquals(fakeUserId, responseUserId);
-        Assertions.assertEquals(fakeTitle, json.get("title"));
-        Assertions.assertEquals(fakeBody, json.get("body"));
+        assertEquals(fakeUserId, responseUserId);
+        assertEquals(fakeTitle, json.get("title"));
+        assertEquals(fakeBody, json.get("body"));
         System.out.println("Response:\n" + response.asString());
     }
 
@@ -77,7 +77,7 @@ public class UpdatePostTest {
                 .response();
 
         JsonPath json = response.jsonPath();
-        Assertions.assertEquals(fakeTitle, json.get("title"));
+        assertEquals(fakeTitle, json.get("title"));
         System.out.println("Response:\n" + response.asString());
     }
 }
