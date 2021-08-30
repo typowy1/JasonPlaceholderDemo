@@ -45,7 +45,7 @@ public class CheckUsersTest {
     }
 
     @Test
-    public void CheckThatEmailNotEndWithPLLoopTest() {
+    public void checkThatEmailNotEndWithPLLoopTest() {
         Response response = given()
                 .when()
                 .get(BASE_URL)
@@ -63,7 +63,7 @@ public class CheckUsersTest {
     }
 
     @Test
-    public void CheckThatEmailNotEndWithPLStreamTest() {
+    public void checkThatEmailNotEndWithPLStreamTest() {
         Response response = given()
                 .when()
                 .get(BASE_URL)
