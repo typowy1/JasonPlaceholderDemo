@@ -19,7 +19,7 @@ public class JsonplaseholderGetTwoTest {
     private final String USERS = "users";
 
     @Test
-    public void jsonplaceholderReadAllUsers() {
+    public void jsonplaceholderReadAllUsersTest() {
 
         given()
                 .when()
@@ -29,7 +29,7 @@ public class JsonplaseholderGetTwoTest {
     }
 
     @Test
-    public void jsonplaceholderReadOneUser() {
+    public void jsonplaceholderReadOneUserTest() {
         //można tak tez
         given()
                 .when()
@@ -45,7 +45,7 @@ public class JsonplaseholderGetTwoTest {
     }
 
     @Test
-    public void jsonplaceholderReadAllUsersName() {
+    public void jsonplaceholderReadAllUsersNameTest() {
 
         Response response = given()
                 .when()
@@ -62,7 +62,7 @@ public class JsonplaseholderGetTwoTest {
     }
 
     @Test
-    public void jsonplaceholderReadUsersQuantity() {
+    public void jsonplaceholderReadUsersQuantityTest() {
 
         Response response = given()
                 .when()
@@ -79,7 +79,7 @@ public class JsonplaseholderGetTwoTest {
 
     //Path variables
     @Test
-    public void jsonplaceholderReadOneUserWithPathVariable() {
+    public void jsonplaceholderReadOneUserWithPathVariableTest() {
 
         Response response = given()
                 .pathParam("userId", 1)
@@ -99,7 +99,7 @@ public class JsonplaseholderGetTwoTest {
 
     //Query params
     @Test
-    public void jsonplaceholderReadOneUserWithQueryParams() {
+    public void jsonplaceholderReadOneUserWithQueryParamsTest() {
 //tu zwróci liste uzytkownikow wiec trzeba sprawdzac z listy
         Response response = given()
                 .queryParam("username", "Bret")
